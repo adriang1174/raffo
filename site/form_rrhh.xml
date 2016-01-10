@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="form_rrhh.asp"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="585"
+ height="383"
+ bkcolor="0x990000"
+ transparent="f"
+ fontcolor="0x000000"
+ outlinecolor="0x990000"
+ themecolor="0xC0C0C0"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="false"
+ verifymessage="The E-Mail address you entered does not match !"
+ reqmessage="One or More Fields are Required !"
+ invalidemailmsg="is an invalid address, please correct it."
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="false"
+ disableclicktoactiveprompt="true"
+ extensions="*.txt;*.gif;*.jpg;*.jpeg;*.zip;*.doc;*.png;*.pdf;*.rtf;*.html;*.docx;*.xslx"
+>
+
+<hidden
+ name="thankyoupage"
+ value="http://www.laboratoriosraffo.com.ar/gracias.html"
+></hidden>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<combobox
+ name="PUESTO A SOLICITAR"
+ x="117"
+ y="9"
+ bkcolor="0xFFFFFF"
+ fontcolor="0x000000"
+ isemail="false"
+ w="394"
+ h="20">
+  <item name="BIOQUIMICO/A"></item>
+  <item name="TECNICO/A  en ANALISIS CLINICOS"></item>
+  <item name="EXTRACCIONISTA"></item>
+  <item name="FACTURISTA  de LABORATORIO ANALISIS CLINICO"></item>
+  <item name="ADMINISTRATIVO/A  RECEPCIONISTA de LABORATORIO ANALISIS CLINICOS"></item>
+</combobox>
+
+<textinput
+ name="NOMBRE"
+ x="3"
+ y="104"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="DOMICILIO"
+ x="312"
+ y="104"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="CIUDAD"
+ x="312"
+ y="154"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="CP"
+ x="312"
+ y="204"
+ w="101"
+ h="22"
+ initvalue=""
+ maxchars="8"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="TELEFONO"
+ x="3"
+ y="154"
+ w="171"
+ h="22"
+ initvalue=""
+ maxchars="15"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Email"
+ x="3"
+ y="204"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<textarea
+ name="INFORMACION-ADICIONAL"
+ x="3"
+ y="258"
+ w="580"
+ h="81"
+ initvalue=""
+ maxchars="300"
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<submitbutton
+ name="Submit Button"
+ x="3"
+ y="353"
+ w="100"
+ h="20"
+ label="ENVIAR"
+ fontname="Arial"
+ fontcolor="0x333333"
+  fontsize="12"
+></submitbutton>
+
+<resetbutton
+ name="Reset Button"
+ x="117"
+ y="353"
+ w="100"
+ h="20"
+ label="BORRAR"
+ fontname="Arial"
+ fontcolor="0x333333"
+  fontsize="12"
+></resetbutton>
+
+<label
+ name="My Text 2"
+ x="3"
+ y="85"
+ w="108"
+ h="16"
+ text="Nombre y Apellido"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 3"
+ x="3"
+ y="187"
+ w="40"
+ h="16"
+ text="E-mail"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 4"
+ x="3"
+ y="138"
+ w="54"
+ h="16"
+ text="Teléfono"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 8"
+ x="3"
+ y="241"
+ w="127"
+ h="16"
+ text="Información Adicional"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 5"
+ x="312"
+ y="87"
+ w="55"
+ h="16"
+ text="Domicilio"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 6"
+ x="312"
+ y="138"
+ w="107"
+ h="16"
+ text="Ciudad / Provincia"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 1"
+ x="312"
+ y="187"
+ w="19"
+ h="16"
+ text="CP"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 9"
+ x="2"
+ y="15"
+ w="104"
+ h="16"
+ text="........................."
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 7"
+ x="3"
+ y="8"
+ w="108"
+ h="16"
+ text="Puesto a Solicitar:"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+</form>

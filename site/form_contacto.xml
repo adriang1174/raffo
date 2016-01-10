@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="form_contacto.asp"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="585"
+ height="300"
+ bkcolor="0x990000"
+ transparent="f"
+ fontcolor="0x000000"
+ outlinecolor="0x990000"
+ themecolor="0xC0C0C0"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="false"
+ verifymessage="The E-Mail address you entered does not match !"
+ reqmessage="One or More Fields are Required !"
+ invalidemailmsg="is an invalid address, please correct it."
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="false"
+ disableclicktoactiveprompt="true"
+ extensions="*.txt;*.gif;*.jpg;*.jpeg;*.zip;*.doc;*.png;*.pdf;*.rtf;*.html;*.docx;*.xslx"
+>
+
+<hidden
+ name="thankyoupage"
+ value="http://www.laboratoriosraffo.com.ar/gracias.html"
+></hidden>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<textinput
+ name="NOMBRE"
+ x="3"
+ y="26"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="DOMICILIO"
+ x="312"
+ y="26"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="CIUDAD"
+ x="312"
+ y="76"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="CP"
+ x="312"
+ y="126"
+ w="101"
+ h="22"
+ initvalue=""
+ maxchars="8"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="TELEFONO"
+ x="3"
+ y="76"
+ w="171"
+ h="22"
+ initvalue=""
+ maxchars="15"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Email"
+ x="3"
+ y="126"
+ w="271"
+ h="22"
+ initvalue=""
+ maxchars="30"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<textarea
+ name="CONSULTA"
+ x="3"
+ y="180"
+ w="580"
+ h="81"
+ initvalue=""
+ maxchars="300"
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<submitbutton
+ name="Submit Button"
+ x="3"
+ y="269"
+ w="100"
+ h="20"
+ label="ENVIAR"
+ fontname="Arial"
+ fontcolor="0x333333"
+  fontsize="12"
+></submitbutton>
+
+<resetbutton
+ name="Reset Button"
+ x="484"
+ y="269"
+ w="100"
+ h="20"
+ label="BORRAR"
+ fontname="Arial"
+ fontcolor="0x333333"
+  fontsize="12"
+></resetbutton>
+
+<label
+ name="My Text 2"
+ x="3"
+ y="7"
+ w="108"
+ h="16"
+ text="Nombre y Apellido"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 3"
+ x="3"
+ y="109"
+ w="40"
+ h="16"
+ text="E-mail"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 4"
+ x="3"
+ y="60"
+ w="54"
+ h="16"
+ text="Teléfono"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 8"
+ x="3"
+ y="163"
+ w="126"
+ h="16"
+ text="Motivo de la Consulta"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 5"
+ x="312"
+ y="9"
+ w="55"
+ h="16"
+ text="Domicilio"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 6"
+ x="312"
+ y="60"
+ w="107"
+ h="16"
+ text="Ciudad / Provincia"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 1"
+ x="312"
+ y="109"
+ w="19"
+ h="16"
+ text="CP"
+  fontname="Tahoma"
+  fontcolor="0xFFFFFF"
+  fontsize="13"
+></label>
+
+</form>

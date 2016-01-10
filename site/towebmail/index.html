@@ -1,0 +1,297 @@
+
+<HTML><HEAD><TITLE>Acceder a Atmail</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">      
+
+<link rel="stylesheet" href="html/login.css" type="text/css">
+<style>
+<!--
+.text01 {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+width:130px
+}
+-->
+</style>
+
+<script language="Javascript">
+// Reload to the master frame if we are inside a frameset
+if (parent.frames[1]) top.window.location=self.location;
+
+function help()	{
+helpwin();
+}
+
+function switchtype()	{
+
+if(document.getElementById('mailserver').style.display == 'none')	{
+
+document.loginPage.pop3host.name="pop3hostdisable";
+document.loginPage.pop3hostexternal.name="pop3host";
+//pop3hosttext.name.value="pop3host_disabled";
+
+document.getElementById('mailserver').style.display = "";
+document.getElementById('mailservertrans').style.display = "";
+document.getElementById('externalaccount').style.display = "";
+document.getElementById('localaccount').style.display = "none";
+document.getElementById('externalinfo').style.display = "none";
+document.getElementById('localinfo').style.display = "";
+
+
+} else	{
+
+document.loginPage.pop3hostexternal.name="pop3hostexternal";
+document.loginPage.pop3host.name="pop3host";
+
+document.getElementById('mailserver').style.display = "none";
+document.getElementById('mailservertrans').style.display = "none";
+document.getElementById('externalaccount').style.display = "none";
+document.getElementById('localaccount').style.display = "";
+document.getElementById('externalinfo').style.display = "";
+document.getElementById('localinfo').style.display = "none";
+
+
+
+}
+
+}
+
+function check_newwindow()	{
+
+var login = document.loginPage.LoginType[document.loginPage.LoginType.selectedIndex].value;
+
+if(login == 'xp')	{
+document.getElementById('NewWindowDisplayTr').style.display='';
+document.getElementById('NewWindowDisplay').style.display='';
+} else if(login == 'xul')	{
+document.getElementById('NewWindowDisplayTr').style.display='';
+document.getElementById('NewWindowDisplay').style.display='';
+} else	{
+document.getElementById('NewWindowDisplayTr').style.display='none';
+document.getElementById('NewWindowDisplay').style.display='none';
+
+}
+
+
+}
+
+function check_default()	{
+
+// Check if Webadmin set to use a default interface
+}
+
+function BrowserVerChk() {
+	this.Type = false;
+	this.TypeLong = false;
+	this.Version = false;
+	this.LateGen = false;
+
+	if (navigator.appVersion.indexOf("MSIE") != -1) {
+		this.Type = "MSIE";
+		this.TypeLong = "Internet Explorer";
+		var TempArray = navigator.appVersion.split("MSIE");
+		this.Version = parseFloat(TempArray[1]);
+		if (this.Version >= 6) this.LateGen = true;
+	} else if (navigator.userAgent.indexOf("Firefox") != -1) {
+		this.Type = "Firefox";
+		this.TypeLong = "Firefox";
+		var VersionIndex = navigator.userAgent.indexOf("Firefox") + 8;
+		this.Version = (navigator.userAgent.charAt(VersionIndex) + "." + navigator.userAgent.charAt(VersionIndex + 2)) * 1;
+		if (this.Version >= 1.5) this.LateGen = true;
+	}
+}
+
+var BrowserVer = new BrowserVerChk();
+
+function BrowserVsInterface() {
+	document.body.style.cursor = "wait";
+	var SelectedInterface = document.loginPage.LoginType.selectedIndex;
+	var ConfirmUser = false;
+	if (SelectedInterface > 0) {
+		if (SelectedInterface == 1 && BrowserVer.LateGen != true) {
+			if (BrowserVer.Type == "Firefox") {
+				ConfirmUser = "Firefox Version 1.5 or later";
+			} else {
+				ConfirmUser = "Internet Explorer Version 6 or later";
+			}
+		} else if (SelectedInterface == 2 && (BrowserVer.Type != "MSIE" || BrowserVer.LateGen != true)) {
+			ConfirmUser = "Internet Explorer Version 6 or later";
+		} else if (SelectedInterface == 3 && BrowserVer.Type != "Firefox") {
+			ConfirmUser = "Firefox Version 1.0 or later";
+		} else {
+			ConfirmUser = false;
+		}
+	}
+
+	if (ConfirmUser != false) {
+		if (confirm ("Your Browser does not match the recommended requirements for this Interface.\nYou are using" + BrowserVer.TypeLong + " Version " + BrowserVer.Version + ", You need " + ConfirmUser + ".\nAre you sure you want to continue logging in?") == true) {
+			ConfirmUser = false;
+		}
+	}
+
+	if (ConfirmUser == false) {
+		document.loginPage.submit();
+	} else {
+		document.body.style.cursor = "";
+	}
+}
+
+</script>
+
+<script language="Javascript" src="http://tcgis.laboratorioraffo.com/webmail-php-r/javascript/browsercheck.js"></script>
+<script language="Javascript" src="http://tcgis.laboratorioraffo.com/webmail-php-r/html/espanol/javascript/xp.js"></script>
+
+
+
+</head>
+
+<body onLoad="browsercheck(); document.loginPage.username.focus();" bgcolor="#E5E5E5" link="#6699CC" vlink="#6699CC" alink="#336699">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+
+	<td bgcolor="#E5E5E5" valign="middle" ><table width="430" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr> 
+		  <td colspan="3"><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/ima_01/copete_01.jpg" width="430" height="83"></td>
+		</tr>
+		<tr>
+		  <td colspan="3"><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/ima_01/copete_02.jpg" width="430" height="77"></td>
+	  </tr>
+		<tr>
+		  <td width="13" height="322"><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/ima_01/marco_01.jpg" width="13" height='322'></td>
+	      <td valign="top" bgcolor="#F3F2EE"><table border="0" cellpadding="0" cellspacing="0" >
+					<tr >
+					  <td ><font class="loginhead"><b>
+
+<br><br>
+</b></font></td>
+					</tr>
+					<tr>
+					  <td>
+
+
+</font></td>
+					</tr>
+				  </table>
+				  <br>
+				  <table width="391" border="0" cellpadding="0" cellspacing="0">
+					<FORM action="http://tcgis.laboratorioraffo.com/webmail-php-r/atmail.php" method="post" name="loginPage" target="_top" onSubmit="document.body.style.cursor = 'wait'; return true;">
+					  <tr > 
+						<td >&nbsp;</td>
+						<td align="right" valign="top" nowrap > <input name="username" type=text class="text01" id="username">						</td>
+						<td width="18" ><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/ima_01/arroba.jpg" width="26" height="21"></td>
+						<td align="left" valign="top" >
+<div id="localaccount" style="display:none"> 
+							<select class="loginselect" name="pop3host">
+
+							</select>
+						  </div>
+						  <div id="externalaccount" style="	font-family: Tahoma;	font-size: 11px;	color: #000000;	text-decoration: none; font-weight: bold;"> 
+							<input name="pop3hostexternal" type="hidden" class="text01" value="laboratorioraffo.com">laboratorioraffo.com
+						  </div>
+						<td >&nbsp;</td>
+					  </tr>
+
+
+					  <tr > 
+						<td colspan="5" height='6'><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/imgs/trans.gif" height='8'></td>
+					  </tr>
+					  <tr > 
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="text01">Contrase&ntilde;a:&nbsp;&nbsp;</font></td>
+						<td align="left" ><input name="password" type=password class="text01" id="password" ></td>
+						<td >&nbsp;</td>
+					  </tr>  <tr > 
+						<td colspan="5" height='6'><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/imgs/trans.gif" height='8'></td>
+					  </tr>
+					  <tr > 
+						<td >&nbsp;</td>
+						<td colspan="2" align="right" ><font class="text01">Interfaz:&nbsp;&nbsp;</font></td>
+						<td align="left" >
+							
+							<select name="LoginType" onchange="check_newwindow()" class="text01" >
+                            <option value="simple">Simple (cualquier navegador)</option>
+                            <option value="ajax">Simple (Ajax)</option>
+                            <option value="xp">Avanzado (IE6+)</option>
+                            <option value="xul">Avanzado (Mozilla 1.0+)</option>
+                          </select></td>
+						<td >&nbsp;</td>
+					  </tr>
+					  <tr > 
+						<td colspan="5" height='6'><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/imgs/trans.gif" height='8'></td>
+					  </tr>
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					<input name="NewWindow" type="hidden" class="text01" value="0">
+					
+				<input name="Language" type="hidden" class="text01" value="">
+						
+					  
+					  
+					  
+					  
+					  
+					  <tr > 
+						<td >&nbsp;</td>
+						<td colspan="3" align="right" >
+					      <div align="center">
+					        <input type="submit" name="Submit" value="Acceder" class="text01">
+			            </div></td>
+						<td >&nbsp;</td>
+					  </tr>
+
+
+
+<input type='hidden' name='MailType' value='imap'>
+					</form>
+		  </table></td>
+	      <td width="26" height="322"><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/ima_01/marco_02.jpg" width="26" height='322'></td>
+	  </tr>
+		<tr>
+		  <td colspan="3"><img src="http://tcgis.laboratorioraffo.com/webmail-php-r/ima_01/marco_03.jpg" width="430" height="28" border="0"></td>
+	  </tr>
+	  </table>
+	  <table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr> 
+		  <td><table width="430" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td>
+
+				  <br>
+				  
+<!-- --------------------------------------------------------------------------- -->
+
+
+<script language="Javascript">
+document.loginPage.pop3host.name="pop3hostdisable";
+document.loginPage.pop3hostexternal.name="pop3host";
+</script>
+
+
+
+
+
+
+</body>
+</html>
